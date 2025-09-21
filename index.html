@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>TODO</h2>
+      <ul>
+        <li><a href="#">🏠 Home</a></li>
+        <li><a href="#">📂 My Projects</a></li>
+        <li><a href="#">➕ New Project</a></li>
+        <li><a href="#">🔀 Sort</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <h2>My Tasks ✅</h2>
+
+      <!-- Add Task -->
+      <div class="input-box">
+        <input type="text" id="taskInput" placeholder="Add a new task...">
+        <label type="date" id="taskDate">
+        <select id="taskPriority" title="Select priority">
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+        <button id="addBtn">Add</button>
+      </div>
+
+      <!-- Active Tasks -->
+      <h3>Active Tasks</h3>
+      <ul id="taskList"></ul>
+
+      <!-- Completed Tasks -->
+      <h3>Completed Tasks</h3>
+      <ul id="completedList"></ul>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* App Layout */
+.app-container {
+  display: flex;
+  width: 100%;
+  max-width: 1000px;
+  min-height: 90vh;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 20px;
+}
+.sidebar h2 {
+  margin-bottom: 20px;
+}
+.sidebar ul {
+  list-style: none;
+}
+.sidebar li {
+  margin: 15px 0;
+}
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.sidebar a:hover {
+  color: #ffd369;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  overflow-y: auto;
+}
+.main-content h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+.main-content h3 {
+  margin: 15px 0 10px;
+  color: #444;
+}
+
+/* Input Box */
+.input-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.input-box input,
+.input-box select,
+.input-box button {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+.input-box input {
+  flex: 1;
+}
+.input-box button {
+  background: #764ba2;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.input-box button:hover {
+  background: #5a3796;
+}
+
+/* Task Styles */
+ul {
+  list-style: none;
+}
+ul li {
+  background: #555151;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+  animation: fadeIn 0.5s forwards;
+}
+ul li.completed {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+.task-info {
+  display: flex;
+  flex-direction: column;
+}
+.task-date {
+  font-size: 12px;
+  color: #666;
+}
+
+/* Priority Colors */
+li.low { border-left: 5px solid green; }
+li.medium { border-left: 5px solid orange; }
+li.high { border-left: 5px solid red; }
+
+/* Actions */
+.actions {
+  display: flex;
+  gap: 8px;
+}
+.actions button {
+  border: none;
+  background: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.actions button:hover {
+  transform: scale(1.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
